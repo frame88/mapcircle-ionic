@@ -1,0 +1,5 @@
+@mixin josefin {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.josefin { @include josefin }

@@ -1,4 +1,47 @@
+@import '../../../theme/typography.scss';
+@import '../../../theme/colors.scss';
+
 #mapId {
     height: 100%;
     width: 100%;
+}
+
+
+.bg-gradient {
+    background: rgb(1, 24, 32);
+    background: linear-gradient(180deg, rgba(1, 24, 32, 1) 13%, rgba(3, 101, 134, 1) 69%);
+    height: 35vh;
+}
+
+.bg-svg {
+    height: 100%;
+    background-image: url('../../../assets/bg-login.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    letter-spacing: 10px;
+    color: white;
+    @include josefin;
+}
+
+button {
+    color: $green;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 10px;
+    @include josefin;
+}
+
+.container-map {
+    height: 70vh;
+    position: relative;
+    border-top: 8px solid $green;
+    #logo { 
+        position: absolute; 
+        top: -40px; left: calc(50vw - 50px);
+        z-index: 1000; 
+        width: 100px;
+    }
 }

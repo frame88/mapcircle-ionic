@@ -10,7 +10,7 @@
 .bg-gradient {
     background: rgb(1, 24, 32);
     background: linear-gradient(180deg, rgba(1, 24, 32, 1) 13%, rgba(3, 101, 134, 1) 69%);
-    height: 35vh;
+    height: 25vh;
 }
 
 .bg-svg {
@@ -24,6 +24,7 @@ h1 {
     letter-spacing: 10px;
     color: white;
     @include josefin;
+    font-size: 34px;
 }
 
 button {
@@ -35,7 +36,7 @@ button {
 }
 
 .container-map {
-    height: 70vh;
+    height: 75vh;
     position: relative;
     border-top: 8px solid $green;
     #logo { 

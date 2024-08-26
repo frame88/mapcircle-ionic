@@ -22,11 +22,28 @@ export class LoginPage implements OnInit {
   }
 
   loadMap() {
-    this.map = L.map('mapId').setView([51.505, -0.09], 13);
+    this.map = L.map('mapId', {
+      zoom: 21,
+      zoomControl: false
+    });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 21,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
+
+    // Geolocalizzazione automatica
+    this.map.locate({ setView: true, maxZoom: 21, enableHighAccuracy: true });
+
+    this.map.on('locationfound', (e: any) => {
+      if(this.map) {
+        L.marker(e.latlng).addTo(this.map).bindPopup('La tua posizione').openPopup();
+      }
+    });
+    //errori
+    this.map.on('locationerror', (e: any) => {
+      alert("Geolocation failed: " + e.message);
+    });
   }
 
 }

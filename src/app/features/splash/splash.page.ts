@@ -19,15 +19,14 @@ export class SplashPage implements OnInit {
   ngOnInit() {
     this.animateLogo();
     setTimeout(() => {
-      this.router.navigateByUrl('/login'); // Reindirizza alla pagina di login dopo 5 secondi
+      this.router.navigateByUrl('/login');
     }, 3500);
   }
 
   animateLogo() {
     gsap.fromTo('.logo', 
-      { opacity: 0, y: 300 }, // Partenza: invisibile e fuori schermo (in basso)
-      { opacity: 1, y: 0, duration: 1.7, ease: 'elastic.out', scale: 1 } // Arrivo: visibile e centrato verticalmente
-    );
+      { opacity: 0, y: 300 }, 
+      { opacity: 1, y: 0, duration: 1.7, ease: 'elastic.out', scale: 1 } )
   }
 
 }

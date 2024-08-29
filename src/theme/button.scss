@@ -1,0 +1,23 @@
+@import '../theme/typography.scss';
+@import '../theme/colors.scss';
+
+button { border: none; &:active{transform: scale(0.9)} }
+
+.btn-primary ,.btn-secondary {
+    padding: 2rem 1rem;    
+}
+
+.btn-primary {
+    border: 2px solid $primary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: $primary;
+}
+
+.btn-secondary {
+    border: 2px solid $secondary;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: white;
+    color: #006885;
+}

@@ -1,4 +1,5 @@
 @import '../../../theme/typography.scss';
+@import '../../../theme/button.scss';
 @import '../../../theme/colors.scss';
 
 #mapId {
@@ -10,7 +11,7 @@
 .bg-gradient {
     background: rgb(1, 24, 32);
     background: linear-gradient(180deg, rgba(1, 24, 32, 1) 13%, rgba(3, 101, 134, 1) 69%);
-    height: 25vh;
+    height: 35vh;
 }
 
 .bg-svg {
@@ -27,8 +28,8 @@ h1 {
     font-size: 34px;
 }
 
-button {
-    color: $green;
+.forgot {
+    color: $secondary;
     background-color: transparent;
     border: none;
     margin-bottom: 10px;
@@ -38,11 +39,14 @@ button {
 .container-map {
     height: 75vh;
     position: relative;
-    border-top: 8px solid $green;
+    border-top: 8px solid $secondary;
     #logo { 
         position: absolute; 
-        top: -40px; left: calc(50vw - 50px);
+        top: -60px; left: calc(50vw - 80px);
         z-index: 1000; 
-        width: 100px;
+        width: 160px;
+        -webkit-box-shadow: 2px 30px 41px -20px rgba(0, 0, 0, 0.39);
+        -moz-box-shadow: 2px 30px 41px -20px rgba(0, 0, 0, 0.39);
+        box-shadow: 2px 30px 41px -20px rgba(0, 0, 0, 0.39);
     }
 }

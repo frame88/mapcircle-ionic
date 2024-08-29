@@ -127,7 +127,8 @@ body {
     margin: 0px;
     border: 0px;
     box-sizing: border-box;
-    font-family: "Inter Tight", sans-serif;
+    font-family: "Prompt", sans-serif;
+    color: #006885;
 }
 
 body.no-scroll {
@@ -1108,27 +1109,6 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-.btn-primary,
-.btn-secondary {
-    text-transform: uppercase;
-    padding: 1rem 3rem;
-    border: 1px solid black;
-    cursor: pointer;
-
-    &:active {
-        transform: scale(0.9);
-    }
-}
-
-.btn-primary {
-    background-color: black;
-    color: white;
-}
-
-.btn-secondary {
-    background-color: white;
 }
 
 /* width */

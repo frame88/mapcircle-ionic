@@ -1,27 +1,32 @@
-#container {
-  text-align: center;
+@import '../../../theme/button.scss';
+@import '../../../theme/colors.scss';
 
+#mapId {
+  height: 100dvh;
+  width: 100vw;
+}
+
+#logo {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  right: 1rem; top: 3rem;
+  z-index: 1000000;
+  width: 70px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.container-btn {
+  position: absolute;
+  left: 1rem; top: 3rem;
+  z-index: 1000000;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+#search {
+  text-transform: uppercase;
+  color: white;
+  background-color: $primary;
+  position: absolute; top: calc(95dvh); left: calc(50vw - 67px);
+  z-index: 1000000!important;
+  padding: .3rem .8rem;
+  line-height: unset;
+  border-radius: 30px;
+  border: 2px solid $secondary;
 }

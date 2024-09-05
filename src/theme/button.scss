@@ -21,3 +21,10 @@ button { border: none; &:active{transform: scale(0.9)} }
     background-color: white;
     color: #006885;
 }
+
+.btn-map {
+    border-radius: 50%;
+    background-color: $primary;
+    border: 2px solid $secondary;
+    height: 60px; width: 60px;
+}

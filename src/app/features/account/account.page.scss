@@ -2,7 +2,12 @@
 @import '../../../theme/typography.scss';
 @import '../../../theme/colors.scss';
 
-.bg-white { background-color: white; height: 100dvh}
+.bg-white { 
+    background-color: white; height: 100dvh;
+    background-image: url('../../../assets/bg-account.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+}
 
 h1 { font-size: 40px;}
 

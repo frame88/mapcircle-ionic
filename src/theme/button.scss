@@ -28,3 +28,20 @@ button { border: none; &:active{transform: scale(0.9)} }
     border: 2px solid $secondary;
     height: 60px; width: 60px;
 }
+
+.btn-danger-primary,
+.btn-danger-secondary {
+    width: 70vw; height: 40px;
+    text-transform: uppercase;
+}
+
+.btn-danger-primary {
+    color: white;
+    border: 2px solid #D12E26;
+    background-color: #D12E26;
+}
+.btn-danger-secondary {
+    color: #D12E26;
+    border: 2px solid #D12E26;
+    background-color: white;
+}

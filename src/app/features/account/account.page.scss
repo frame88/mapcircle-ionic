@@ -1,0 +1,19 @@
+@import '../../../theme/button.scss';
+@import '../../../theme/typography.scss';
+@import '../../../theme/colors.scss';
+
+.bg-white { background-color: white; height: 100vh}
+
+h1 { font-size: 40px;}
+
+#user-img {
+    border-radius: 50%;
+    width: 220px;
+    border: 3px solid $secondary;
+}
+
+.item-count {
+    display: flex; flex-direction: column;
+    align-items: center;
+}
+

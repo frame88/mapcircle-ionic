@@ -1,10 +1,19 @@
 <div>
     <div id="mapId"></div>
-    <button id="search">cerca coupon</button>
     <img id="logo" src="../../../assets/icon/logo.svg" alt="">
     <div class="flex-column container-btn gap1">
         <button (click)="vamos()" class="btn-map"><img src="../../../assets/icon/user.svg" alt=""></button>
         <button class="btn-map"><img src="../../../assets/icon/ticket.svg" alt=""></button>
         <button class="btn-map"><img src="../../../assets/icon/chat.svg" alt=""></button>
     </div>
+    <button (click)="isOpen = !isOpen" id="search">cerca coupon</button>
+    @if(isOpen) {
+        <div id="list-coupon">
+            <ul>
+                @for(item of coupons; track item.name) {
+                    <li>{{item.name}}</li>
+                }
+            </ul>
+        </div>
+    }
 </div>

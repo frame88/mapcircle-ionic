@@ -11,7 +11,9 @@ import * as L from 'leaflet';
   imports: [IonHeader, IonToolbar, IonTitle, IonContent],
 })
 export class HomePage implements OnInit {
-    map: L.Map | undefined;
+  map: L.Map | undefined;
+  coupons = [{name: 'zara', value: '10'}]
+  isOpen = false;
 
   constructor(private router: Router) {}
 

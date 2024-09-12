@@ -1,7 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
 import * as L from 'leaflet';
+import { GraphicService } from 'src/app/services/graphic.service';
 
 @Component({
   selector: 'app-home',
@@ -14,15 +15,16 @@ export class HomePage implements OnInit {
   map: L.Map | undefined;
   coupons = [{name: 'zara', value: '10'}]
   isOpen = false;
+  data: any[] = [];
 
-  constructor(private router: Router) {}
-
-    vamos() {
-      this.router.navigateByUrl('/account'); 
-    }
+  constructor(public graphic: GraphicService, private http: HttpClient) {}
 
     ngOnInit() {
+      //creazione mappa
       this.loadMap();
+      this.http.get("../../../assets/data.json").subscribe(data =>{
+        console.log(data);
+      })
     }
 
     loadMap() {
@@ -49,5 +51,7 @@ export class HomePage implements OnInit {
       alert("Geolocation failed: " + e.message);
     });
   }
+
+  
 
 }

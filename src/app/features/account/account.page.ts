@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { GraphicService } from 'src/app/services/graphic.service';
 
 @Component({
   selector: 'app-account',
@@ -10,11 +11,8 @@ import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/stan
   standalone: true,
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class AccountPage implements OnInit {
+export class AccountPage {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(public graphic: GraphicService) { }
 
 }

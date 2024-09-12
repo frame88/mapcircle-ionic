@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Posto 1",
+    "value": 10,
+    "zona": "Centro",
+    "coordinate_posto": {
+      "lat": 41.9028,
+      "lng": 12.4964
+    }
+  },
+  {
+    "name": "Posto 2",
+    "value": 20,
+    "zona": "Nord",
+    "coordinate_posto": {
+      "lat": 45.4642,
+      "lng": 9.1900
+    }
+  },
+  {
+    "name": "Posto 3",
+    "value": 30,
+    "zona": "Sud",
+    "coordinate_posto": {
+      "lat": 40.8518,
+      "lng": 14.2681
+    }
+  }
+]

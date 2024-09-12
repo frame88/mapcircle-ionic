@@ -135,8 +135,6 @@ body.no-scroll {
     overflow: hidden;
 }
 
-
-
 .red {
     background-color: red;
 }
@@ -1103,6 +1101,10 @@ ul {
 
     padding: 0;
 
+}
+
+li {
+    list-style-type: none;
 }
 
 

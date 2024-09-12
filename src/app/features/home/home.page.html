@@ -3,8 +3,8 @@
     <img id="logo" src="../../../assets/icon/logo.svg" alt="">
     <div class="flex-column container-btn gap1">
         <button (click)="graphic.vamos('/account')" class="btn-map"><img src="../../../assets/icon/user.svg" alt=""></button>
-        <button class="btn-map"><img src="../../../assets/icon/ticket.svg" alt=""></button>
-        <button class="btn-map"><img src="../../../assets/icon/chat.svg" alt=""></button>
+        <button (click)="graphic.vamos('/account')" class="btn-map"><img src="../../../assets/icon/ticket.svg" alt=""></button>
+        <button (click)="graphic.vamos('/chat')" class="btn-map"><img src="../../../assets/icon/chat.svg" alt=""></button>
     </div>
     <button (click)="isOpen = !isOpen" id="search">{{ isOpen ? 'chiudi' : 'cerca coupon' }}</button>
     @if(isOpen) {

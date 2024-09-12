@@ -23,20 +23,27 @@
   text-transform: uppercase;
   color: white;
   background-color: $primary;
-  position: absolute; top: calc(93dvh); left: calc(50vw - 67px);
+  position: absolute; top: calc(90dvh); left: calc(50vw - 67px);
   z-index: 1000000!important;
-  padding: .3rem .8rem;
+  width: 160px; height: 55px;
   line-height: unset;
   border-radius: 30px;
   border: 2px solid $secondary;
 }
 
 #list-coupon {
-  position: absolute; top: calc(20dvh); left: 5vw;
+  position: absolute; top: calc(15dvh); left: 5vw;
   z-index: 1000000!important;
   background-color: white;
   border-radius: 20px;
   width: 90vw;
   height: 70dvh;
   overflow: auto;
+
+  li {
+    p {
+      color: $primary;
+      font-size: 24px;
+    }
+  }
 }

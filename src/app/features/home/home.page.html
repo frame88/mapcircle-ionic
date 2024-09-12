@@ -6,12 +6,20 @@
         <button class="btn-map"><img src="../../../assets/icon/ticket.svg" alt=""></button>
         <button class="btn-map"><img src="../../../assets/icon/chat.svg" alt=""></button>
     </div>
-    <button (click)="isOpen = !isOpen" id="search">cerca coupon</button>
+    <button (click)="isOpen = !isOpen" id="search">{{ isOpen ? 'chiudi' : 'cerca coupon' }}</button>
     @if(isOpen) {
         <div id="list-coupon">
-            <ul>
+            <ul class="p2">
                 @for(item of coupons; track item.name) {
-                    <li>{{item.name}}</li>
+                    <li class="space-between align-center mb05">
+                        <div class="flex gap1">
+                            <p>
+                                <b>{{item.name}}</b>
+                                {{item.value}}€
+                            </p>
+                        </div>
+                        <button class="btn-coord"><img src="../../../assets/icon/location-dot-solid.svg" alt=""></button>
+                    </li>
                 }
             </ul>
         </div>

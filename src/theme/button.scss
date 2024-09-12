@@ -22,12 +22,14 @@ button { border: none; &:active{transform: scale(0.9)} }
     color: #006885;
 }
 
-.btn-map {
+.btn-map, .btn-coord {
     border-radius: 50%;
-    background-color: $primary;
     border: 2px solid $secondary;
     height: 60px; width: 60px;
 }
+
+.btn-map { background-color: $primary; }
+.btn-coord { background-color: white;}
 
 .btn-danger-primary,
 .btn-danger-secondary {

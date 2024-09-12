@@ -4,6 +4,18 @@ import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/stan
 import * as L from 'leaflet';
 import { GraphicService } from 'src/app/services/graphic.service';
 
+export interface Voucher {
+  name: string; 
+  value: number; 
+  zona: string;
+  coordinate_posto: Coordinate; 
+}
+
+export interface Coordinate {
+  lat: number;
+  lng: number;
+}
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -13,17 +25,17 @@ import { GraphicService } from 'src/app/services/graphic.service';
 })
 export class HomePage implements OnInit {
   map: L.Map | undefined;
-  coupons = [{name: 'zara', value: '10'}]
   isOpen = false;
-  data: any[] = [];
+  coupons: Voucher[] = [];
 
   constructor(public graphic: GraphicService, private http: HttpClient) {}
 
     ngOnInit() {
       //creazione mappa
       this.loadMap();
-      this.http.get("../../../assets/data.json").subscribe(data =>{
+      this.http.get<{ coupons: Voucher[] }>("../../../assets/data.json").subscribe(data =>{
         console.log(data);
+        this.coupons = data.coupons;
       })
     }
 

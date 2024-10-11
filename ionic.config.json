@@ -1,7 +1,0 @@
-{
-  "name": "mapcircle-ionic",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}

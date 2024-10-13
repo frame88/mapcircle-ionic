@@ -1,30 +1,21 @@
 import { Component } from '@angular/core';
-import {
-  FormBuilder,
-  FormGroup,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrl: './register.component.css',
-  imports: [ReactiveFormsModule],
+  styleUrls: ['./register.component.css'], // Correct typo to 'styleUrls'
 })
 export class RegisterComponent {
   registerForm!: FormGroup;
+
   constructor(private formBuilder: FormBuilder) {
     this.registerForm = this.formBuilder.group({
-      email: formBuilder.control('', [
-        Validators.required,
-        Validators.email,
-        Validators.minLength(5),
-      ]),
-      password: formBuilder.control('', [
-        Validators.required,
-        Validators.minLength(7),
-      ]),
+      email: [
+        '',
+        [Validators.required, Validators.email, Validators.minLength(5)],
+      ],
+      password: ['', [Validators.required, Validators.minLength(7)]],
     });
   }
 }

@@ -2,7 +2,12 @@
 
 <div class="login-container">
   <h2>Sign up</h2>
-  <form [formGroup]="registerForm" action="/login" method="post">
+  <form
+    [formGroup]="registerForm"
+    (ngSubmit)="onSubmit()"
+    action="/login"
+    method="post"
+  >
     <div class="input-group">
       <label for="email">Email</label>
       <input

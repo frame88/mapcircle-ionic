@@ -12,7 +12,15 @@
         required
         formControlName="email"
       />
-      <i style="color: tomato"></i>
+      <i
+        style="color: tomato"
+        *ngIf="
+          registerForm.controls['email'].invalid &&
+          (registerForm.controls['email'].dirty ||
+            registerForm.controls['email'].touched)
+        "
+        >a valid email is required</i
+      >
     </div>
     <div class="input-group">
       <label for="password">Password</label>
@@ -23,6 +31,15 @@
         required
         formControlName="password"
       />
+      <i
+        style="color: tomato"
+        *ngIf="
+          registerForm.controls['email'].invalid &&
+          (registerForm.controls['email'].dirty ||
+            registerForm.controls['email'].touched)
+        "
+        >a valid email is required</i
+      >
     </div>
     <button type="submit" class="login-button">Sign up</button>
   </form>

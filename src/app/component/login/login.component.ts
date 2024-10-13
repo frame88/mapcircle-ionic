@@ -1,6 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SupaService } from '../../service/supa.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,11 @@ import { SupaService } from '../../service/supa.service';
 export class LoginComponent implements AfterViewInit {
   loginForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private auth: SupaService) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private auth: SupaService,
+    private router: Router
+  ) {
     this.loginForm = this.formBuilder.group({
       email: [
         '',
@@ -30,6 +35,9 @@ export class LoginComponent implements AfterViewInit {
       .signIn(this.loginForm.value.email, this.loginForm.value.password)
       .then((res) => {
         console.log(res);
+        if (res.data.user?.role === 'authenticated') {
+          this.router.navigate(['/dashboard']);
+        }
       })
       .catch((err) => console.log(err));
   }

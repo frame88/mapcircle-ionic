@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SupaService } from '../../service/supa.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrls: ['./login.component.css'],
 })
-export class LoginComponent {
+export class LoginComponent implements AfterViewInit {
   loginForm!: FormGroup;
 
   constructor(private formBuilder: FormBuilder, private auth: SupaService) {
@@ -18,6 +18,11 @@ export class LoginComponent {
       ],
       password: ['', [Validators.required, Validators.minLength(7)]],
     });
+  }
+
+  // Initialize Supabase client after component is rendered in the browser
+  ngAfterViewInit() {
+    this.auth.initialize();
   }
 
   public onSubmit() {

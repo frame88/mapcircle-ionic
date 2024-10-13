@@ -5,11 +5,28 @@
   <form [formGroup]="loginForm" action="/login" method="post">
     <div class="input-group">
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+      <input type="email" id="email" name="email" required /><i
+        style="color: tomato"
+        *ngIf="
+          loginForm.controls['email'].invalid &&
+          (loginForm.controls['email'].dirty ||
+            loginForm.controls['email'].touched)
+        "
+        >a valid email is required</i
+      >
     </div>
     <div class="input-group">
       <label for="password">Password</label>
       <input type="password" id="password" name="password" required />
+      <i
+        style="color: tomato"
+        *ngIf="
+          loginForm.controls['password'].invalid &&
+          (loginForm.controls['password'].dirty ||
+            loginForm.controls['password'].touched)
+        "
+        >Password must be at least 7 characters</i
+      >
     </div>
     <button type="submit" class="login-button">Sign in</button>
   </form>

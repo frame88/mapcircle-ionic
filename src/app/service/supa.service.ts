@@ -1,9 +1,13 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SupaService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getData() {
+    return this.http.get('https://api.example.com/data');
+  }
 }

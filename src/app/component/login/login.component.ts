@@ -34,7 +34,6 @@ export class LoginComponent implements AfterViewInit {
     this.auth
       .signIn(this.loginForm.value.email, this.loginForm.value.password)
       .then((res) => {
-        console.log(res);
         if (res.data.user?.role === 'authenticated') {
           this.router.navigate(['/dashboard']);
         }

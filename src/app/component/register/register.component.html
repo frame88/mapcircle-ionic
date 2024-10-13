@@ -34,11 +34,11 @@
       <i
         style="color: tomato"
         *ngIf="
-          registerForm.controls['email'].invalid &&
-          (registerForm.controls['email'].dirty ||
-            registerForm.controls['email'].touched)
+          registerForm.controls['password'].invalid &&
+          (registerForm.controls['password'].dirty ||
+            registerForm.controls['password'].touched)
         "
-        >a valid email is required</i
+        >Password must be at least 7 characters</i
       >
     </div>
     <button type="submit" class="login-button">Sign up</button>

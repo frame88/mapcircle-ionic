@@ -21,6 +21,10 @@ export class RegisterComponent {
         Validators.email,
         Validators.minLength(5),
       ]),
+      password: formBuilder.control('', [
+        Validators.required,
+        Validators.minLength(7),
+      ]),
     });
   }
 }

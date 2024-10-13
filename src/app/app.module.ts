@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { HomeComponent } from './component/home/home.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule

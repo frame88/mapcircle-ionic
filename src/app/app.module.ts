@@ -13,6 +13,8 @@ import { HomeComponent } from './component/home/home.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 // Define the routes here
 const routes: Routes = [
   { path: '', component: HomeComponent }, // Default route
@@ -34,6 +36,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes), // Include RouterModule and define routes here
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

@@ -41,6 +41,12 @@
         >Password must be at least 7 characters</i
       >
     </div>
-    <button type="submit" class="login-button">Sign up</button>
+    <button
+      [disabled]="registerForm.invalid"
+      type="submit"
+      class="login-button"
+    >
+      Sign up
+    </button>
   </form>
 </div>

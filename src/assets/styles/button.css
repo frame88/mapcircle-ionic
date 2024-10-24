@@ -1,0 +1,15 @@
+button {
+    height: 50px;
+    border: none;
+    width: 80%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+button:active {
+    transform: scale(0.9);
+    transition: .3s;
+}

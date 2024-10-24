@@ -7,17 +7,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './component/login/login.component';
-import { RegisterComponent } from './component/register/register.component';
-import { HomeComponent } from './component/home/home.component';
+import { LoginComponent } from './features/login/login.component';
+import { HomeComponent } from './features/home/home.component';
+import { RegisterComponent } from './features/register/register.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { ForkComponent } from './features/fork/fork.component';
 
 // Define the routes here
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Default route
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent }
+  { path: '', component: ForkComponent }, // Default route
+  { path: 'signin', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'fork', component: ForkComponent }
 ];
 
 @NgModule({
@@ -25,7 +27,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    ForkComponent
   ],
   imports: [
     BrowserModule,
